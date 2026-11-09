@@ -4,151 +4,178 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#080810">
-<meta name="description" content="NobiCloud — Personal portfolio, software development, Android applications and technology projects.">
-<title>NobiCloud — Digital Innovation</title>
+<meta name="description" content="Sibi's personal space — projects, technology, anime and interests.">
+<title>NobiCloud — Sibi's Personal Space</title>
+
 <style>
-:root {
-  --bg:#080810;
-  --surface:#11111e;
-  --text:#f4f3ff;
-  --muted:#9999ae;
-  --blue:#5484ff;
-  --purple:#a36aff;
+:root{
+ --bg:#080810;
+ --surface:#121220;
+ --text:#f4f3ff;
+ --muted:#a09fb5;
+ --blue:#5484ff;
+ --purple:#a36aff;
+ --line:#ffffff16;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{
-  background:var(--bg);color:var(--text);
-  font-family:Inter,system-ui,-apple-system,sans-serif;
-  line-height:1.6;overflow-x:hidden
+ background:var(--bg);
+ color:var(--text);
+ font-family:Inter,system-ui,sans-serif;
+ line-height:1.7;
+ overflow-x:hidden;
 }
 a{color:inherit;text-decoration:none}
-.container{width:min(1100px,90%);margin:auto}
+.container{width:min(1080px,90%);margin:auto}
+
 nav{
-  position:sticky;top:0;z-index:10;
-  background:#080810eF;backdrop-filter:blur(18px);
-  border-bottom:1px solid #ffffff12
+ position:sticky;top:0;z-index:100;
+ background:#080810ed;
+ backdrop-filter:blur(18px);
+ border-bottom:1px solid var(--line);
 }
-.nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between}
+.nav-inner{
+ min-height:72px;
+ display:flex;align-items:center;
+ justify-content:space-between;gap:20px;
+}
 .logo{font-size:25px;font-weight:850;letter-spacing:-1px}
 .logo span{color:var(--blue)}
-.nav-links{display:flex;gap:30px;color:var(--muted);font-size:14px}
+.nav-links{display:flex;gap:24px;color:var(--muted);font-size:14px}
 .nav-links a:hover{color:white}
+
 .hero{
-  min-height:650px;display:flex;align-items:center;
-  position:relative;isolation:isolate
+ min-height:590px;
+ display:flex;align-items:center;
+ position:relative;isolation:isolate;
 }
 .hero:before{
-  content:"";position:absolute;z-index:-1;
-  width:500px;height:500px;border-radius:50%;
-  background:#5635c533;filter:blur(110px);
-  top:30px;right:-120px
+ content:"";position:absolute;z-index:-1;
+ width:480px;height:480px;border-radius:50%;
+ background:#5635c544;filter:blur(110px);
+ top:30px;right:-120px;
 }
-.eyebrow{
-  color:#a995ff;font-size:13px;letter-spacing:3px;
-  text-transform:uppercase;font-weight:700
+.eyebrow,.section-label{
+ color:#ae96ff;font-size:12px;
+ letter-spacing:3px;text-transform:uppercase;
+ font-weight:700;
 }
 h1{
-  font-size:clamp(48px,8vw,88px);
-  line-height:1.06;letter-spacing:-5px;
-  margin:22px 0
+ font-size:clamp(48px,8vw,82px);
+ line-height:1.08;letter-spacing:-4px;
+ margin:20px 0;
 }
 .gradient{
-  background:linear-gradient(100deg,#65a0ff,#a66cff);
-  -webkit-background-clip:text;background-clip:text;color:transparent
+ background:linear-gradient(100deg,#65a0ff,#b078ff);
+ -webkit-background-clip:text;
+ background-clip:text;color:transparent;
 }
-.hero p{max-width:590px;color:var(--muted);font-size:18px}
-.actions{display:flex;gap:15px;margin-top:35px;flex-wrap:wrap}
+.hero p,.muted{max-width:610px;color:var(--muted);font-size:17px}
+.actions{display:flex;gap:13px;margin-top:30px;flex-wrap:wrap}
 .btn{
-  display:inline-block;padding:13px 23px;border-radius:10px;
-  font-weight:650;font-size:14px;transition:.2s
+ display:inline-block;padding:12px 21px;
+ border-radius:10px;font-weight:650;
+ font-size:14px;transition:.2s;
 }
 .primary{background:linear-gradient(110deg,#397dff,#9058ef)}
 .secondary{border:1px solid #ffffff25}
-.btn:hover{transform:translateY(-3px);filter:brightness(1.15)}
-section{padding:90px 0}
-.section-label{color:#a58bff;font-size:12px;letter-spacing:3px;text-transform:uppercase}
-h2{font-size:36px;letter-spacing:-1px;margin:10px 0 14px}
-.subtitle{color:var(--muted);max-width:600px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
+
+section{padding:76px 0}
+h2{font-size:34px;letter-spacing:-1px;margin:9px 0 12px}
+
+.cards{
+ display:grid;grid-template-columns:repeat(3,1fr);
+ gap:18px;margin-top:30px;
+}
 .card{
-  background:linear-gradient(145deg,#171726,#10101a);
-  border:1px solid #ffffff12;border-radius:16px;
-  padding:26px;transition:.25s
+ background:linear-gradient(145deg,#171726,#10101a);
+ border:1px solid var(--line);
+ border-radius:16px;padding:24px;
+ transition:.22s;
 }
 .card:hover{transform:translateY(-5px);border-color:#8064ed77}
-.card .symbol{font-size:29px;margin-bottom:20px}
-.card h3{font-size:19px;margin-bottom:10px}
+.symbol{font-size:29px;margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:7px}
 .card p{font-size:14px;color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.card small{display:inline-block;color:#a995ff;margin-top:15px;font-size:12px}
+
+.about-box,.note-box{
+ padding:28px;border:1px solid var(--line);
+ border-radius:17px;background:var(--surface);
+ margin-top:25px;
+}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:25px}
+
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
 .tag{
-  padding:9px 15px;border-radius:8px;
-  background:#171729;border:1px solid #ffffff12;
-  color:#c5c3d9;font-size:13px
+ padding:8px 13px;border-radius:9px;
+ background:#171729;border:1px solid var(--line);
+ color:#cfcee0;font-size:13px;
 }
-.about-box{
-  padding:35px;border:1px solid #ffffff15;
-  border-radius:18px;background:var(--surface);
-  margin-top:30px
+footer{
+ padding:28px 0;border-top:1px solid var(--line);
+ color:var(--muted);font-size:13px;
 }
-.contact-box{
-  margin-top:30px;padding:45px 25px;text-align:center;
-  border:1px solid #ffffff17;border-radius:20px;
-  background:radial-gradient(ellipse at top,#29204a,#11111e 70%)
-}
-footer{padding:30px 0;border-top:1px solid #ffffff12;color:var(--muted);font-size:13px}
-.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
 @media(max-width:700px){
- .nav-inner{height:auto;min-height:68px;flex-wrap:wrap;padding:15px 0;gap:12px}
- .nav-links{gap:15px;font-size:12px;flex-wrap:wrap}
+ .nav-inner{padding:13px 0;align-items:flex-start;flex-direction:column;gap:9px}
+ .nav-links{gap:17px;flex-wrap:wrap;font-size:12px}
+ .hero{min-height:530px}
  h1{letter-spacing:-2.5px}
- .hero{min-height:570px}
- .cards{grid-template-columns:1fr}
- section{padding:65px 0}
- h2{font-size:30px}
- .hero p{font-size:16px}
+ .cards,.two-col{grid-template-columns:1fr}
+ section{padding:58px 0}
+ h2{font-size:29px}
+ .hero p,.muted{font-size:15px}
 }
 </style>
 </head>
-<body>
 
+<body>
 <nav>
  <div class="container nav-inner">
-  <a class="logo" href="#">Nobi<span>Cloud.</span></a>
+  <a class="logo" href="#home">Nobi<span>Cloud.</span></a>
   <div class="nav-links">
    <a href="#home">Home</a>
    <a href="#about">About</a>
    <a href="#projects">Projects</a>
-   <a href="#skills">Skills</a>
-   <a href="#contact">Contact</a>
+   <a href="#interests">Interests</a>
+   <a href="#links">Links</a>
   </div>
  </div>
 </nav>
 
 <main>
+
 <section class="hero container" id="home">
  <div>
-  <div class="eyebrow">WELCOME TO NOBICLOUD</div>
-  <h1>Building<br>Digital <span class="gradient">Experiences.</span></h1>
-  <p>I'm a developer passionate about creating Android applications, software solutions and innovative digital experiences.</p>
+  <div class="eyebrow">A LITTLE CORNER OF THE INTERNET</div>
+  <h1>Hey, I'm Sibi.<br>Welcome to <span class="gradient">my space.</span></h1>
+  <p>
+   This is my personal corner on the web — a place to share
+   the things I build, the stuff I enjoy, and a few things
+   I want my friends to see.
+  </p>
   <div class="actions">
-   <a class="btn primary" href="#projects">Explore My Work ↗</a>
-   <a class="btn secondary" href="#contact">Get In Touch</a>
+   <a class="btn primary" href="#projects">Explore my projects ↗</a>
+   <a class="btn secondary" href="#about">About me</a>
   </div>
  </div>
 </section>
 
 <section id="about">
  <div class="container">
-  <div class="section-label">ABOUT ME</div>
-  <h2>Turning Ideas Into Reality.</h2>
-  <p class="subtitle">Technology enthusiast and developer focused on building useful digital products.</p>
+  <div class="section-label">A LITTLE ABOUT ME</div>
+  <h2>Curious by nature. Always exploring.</h2>
   <div class="about-box">
-   <h3>Hello, I'm Sibi.</h3>
-   <p class="subtitle" style="margin-top:12px">
-    I'm interested in Android development, web technologies,
-    automation and software engineering. I enjoy experimenting
-    with new technologies and turning ideas into working projects.
+   <h3>Hello, I'm Sibi 👋</h3>
+   <p class="muted" style="margin-top:10px">
+    I enjoy exploring technology, building Android applications,
+    experimenting with code and creating useful little tools.
+    I'm also interested in anime, cartoons and discovering
+    interesting things online.
    </p>
   </div>
  </div>
@@ -156,71 +183,96 @@ footer{padding:30px 0;border-top:1px solid #ffffff12;color:var(--muted);font-siz
 
 <section id="projects">
  <div class="container">
-  <div class="section-label">MY WORK</div>
-  <h2>Featured Projects.</h2>
-  <p class="subtitle">A selection of my development projects.</p>
+  <div class="section-label">THINGS I'VE BEEN BUILDING</div>
+  <h2>My projects.</h2>
+  <p class="muted">A few personal experiments and projects. Some are still a work in progress.</p>
+
   <div class="cards">
    <article class="card">
-    <div class="symbol">▶</div>
+    <div class="symbol">🎬</div>
     <h3>Video Player</h3>
-    <p>An Android media player project focused on video and audio playback.</p>
+    <p>An Android media player exploring video, audio, subtitles and playback controls.</p>
+    <small>Android · Kotlin</small>
    </article>
+
    <article class="card">
-    <div class="symbol">📱</div>
+    <div class="symbol">🧮</div>
     <h3>Formula Calc</h3>
-    <p>An Android calculator application for mathematical formulas.</p>
+    <p>An Android calculator project for working with mathematical formulas.</p>
+    <small>Android · App development</small>
    </article>
+
    <article class="card">
-    <div class="symbol">⚙️</div>
+    <div class="symbol">🤖</div>
     <h3>Telegram Bots</h3>
-    <p>Automation tools and Telegram bot projects for useful workflows.</p>
+    <p>Automation projects for file sharing, downloads and useful Telegram workflows.</p>
+    <small>Python · Automation</small>
    </article>
   </div>
  </div>
 </section>
 
-<section id="skills">
+<section id="interests">
  <div class="container">
-  <div class="section-label">TECHNOLOGIES</div>
-  <h2>My Technical Interests.</h2>
-  <div class="tags">
-   <span class="tag">Android Development</span>
-   <span class="tag">Kotlin</span>
-   <span class="tag">Java</span>
-   <span class="tag">Python</span>
-   <span class="tag">HTML & CSS</span>
-   <span class="tag">JavaScript</span>
-   <span class="tag">Git & GitHub</span>
-   <span class="tag">Linux</span>
-   <span class="tag">Termux</span>
-   <span class="tag">Automation</span>
-  </div>
- </div>
-</section>
+  <div class="section-label">WHEN I'M NOT CODING</div>
+  <h2>Things I enjoy.</h2>
 
-<section id="contact">
- <div class="container">
-  <div class="contact-box">
-   <div class="section-label">GET IN TOUCH</div>
-   <h2>Let's Create Something Great.</h2>
-   <p class="subtitle" style="margin:auto">
-    Have an idea or want to collaborate? Let's connect.
-   </p>
-   <div class="actions" style="justify-content:center">
-    <a class="btn primary" href="mailto:YOUR_EMAIL@example.com">Contact Me ↗</a>
-    <a class="btn secondary" href="https://github.com/Nobi08">GitHub ↗</a>
+  <div class="two-col">
+   <div class="note-box">
+    <div class="symbol">🍥</div>
+    <h3>Anime & Cartoons</h3>
+    <p class="muted">Naruto, Dragon Ball, Shinchan, Doraemon and plenty of animated adventures.</p>
+   </div>
+
+   <div class="note-box">
+    <div class="symbol">💻</div>
+    <h3>Technology</h3>
+    <p class="muted">Android, Linux, Termux, web projects, automation and exploring new tools.</p>
+   </div>
+
+   <div class="note-box">
+    <div class="symbol">🎮</div>
+    <h3>Digital World</h3>
+    <p class="muted">Discovering useful apps, websites, software and interesting online projects.</p>
+   </div>
+
+   <div class="note-box">
+    <div class="symbol">🚀</div>
+    <h3>Learning</h3>
+    <p class="muted">Trying new ideas, solving problems and improving my skills one project at a time.</p>
    </div>
   </div>
  </div>
 </section>
+
+<section id="links">
+ <div class="container">
+  <div class="section-label">AROUND THE WEB</div>
+  <h2>Find me here.</h2>
+  <p class="muted">A couple of links worth sharing.</p>
+
+  <div class="actions">
+   <a class="btn primary" href="https://github.com/Nobi08" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+  </div>
+
+  <div class="note-box">
+   <p class="muted">
+    This site is a personal project. Glad you stopped by!
+    Feel free to explore and share the link with friends.
+   </p>
+  </div>
+ </div>
+</section>
+
 </main>
 
 <footer>
  <div class="container footer-inner">
-  <span>© <span id="year"></span> NobiCloud. All rights reserved.</span>
-  <span>Designed & Built with passion.</span>
+  <span>© <span id="year"></span> NobiCloud</span>
+  <span>Made for fun, shared with friends ✦</span>
  </div>
 </footer>
+
 <script>
 document.getElementById("year").textContent=new Date().getFullYear();
 </script>
